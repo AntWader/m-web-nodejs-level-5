@@ -5,6 +5,9 @@
 # docker certbot
 /certbot
 
+# caddy
+/caddy
+
 # Logs
 logs
 *.log

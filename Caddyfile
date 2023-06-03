@@ -1,0 +1,7 @@
+antwader.online/teamcity {
+	reverse_proxy localhost:8111
+}
+
+antwader.online {
+	reverse_proxy web:3000
+}
