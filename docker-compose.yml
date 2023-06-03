@@ -15,7 +15,7 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=mysql
     ports:
-      - 3306:3306
+      - 3106:3306
     volumes:
       - swapi-mysql:/var/lib/mysql
 
