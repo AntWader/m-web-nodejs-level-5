@@ -9,6 +9,7 @@ services:
       - /bin/bash
       - -c
       - |
+        npm install --save-dev jest-teamcity
         npm install eslint-teamcity --no-save
         npm run lint -- --format ./node_modules/eslint-teamcity/index.js
         npm install jest-teamcity --no-save
