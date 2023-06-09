@@ -86,7 +86,6 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node",
-    "testResultsProcessor": "jest-teamcity-reporter"
+    "testEnvironment": "node"
   }
 }
