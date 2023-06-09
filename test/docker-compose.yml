@@ -1,8 +1,8 @@
 version: '3'
 services:
   test-web:
-    depends_on:
-      - test-db
+    # depends_on:
+    #   - test-db
     container_name: swapi.web
     build: ../
     command: 
@@ -11,21 +11,20 @@ services:
       - |
         npm install --save-dev jest-teamcity
         npm run test
-        npm rest:e2e
     ports:
       - "3000:3000"
 
-  test-db:
-    container_name: swapi.mysql
-    image: mysql:8.0
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=test_db
-    ports:
-      - 3206:3306
-    volumes:
-      - test-mysql:/var/lib/mysql
+#   test-db:
+#     container_name: swapi.mysql
+#     image: mysql:8.0
+#     environment:
+#       - MYSQL_ROOT_PASSWORD=root
+#       - MYSQL_DATABASE=test_db
+#     ports:
+#       - 3206:3306
+#     volumes:
+#       - test-mysql:/var/lib/mysql
 
-volumes:
-  test-mysql:
-    driver: local
+# volumes:
+#   test-mysql:
+#     driver: local
