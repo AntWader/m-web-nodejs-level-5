@@ -5,10 +5,10 @@ import { MysqlConnectionOptions } from "typeorm/driver/mysql/MysqlConnectionOpti
 
 export const test_db: MysqlConnectionOptions = {
     type: 'mysql',
-    host: 'localhost',
-    port: 3306,
-    username: 'test_db',
-    password: 'PASSWORD',
+    host: 'test-db',
+    port: 3106,
+    username: 'root',
+    password: 'root',
     database: 'test_db',
     entities: [
         __dirname + '/../**/*.entity{.ts,.js}',
