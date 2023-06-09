@@ -5,11 +5,14 @@ services:
       - test-db
     container_name: swapi.web
     build: ../
-    command: bash -c "
-      npm install eslint-teamcity --no-save
-      && npm run lint -- --format ./node_modules/eslint-teamcity/index.js
-      && npm install jest-teamcity --no-save
-      && npm run test -- --reporters=jest-teamcity"
+    command: 
+      - /bin/bash
+      - -c
+      - |
+        npm install eslint-teamcity --no-save
+        npm run lint -- --format ./node_modules/eslint-teamcity/index.js
+        npm install jest-teamcity --no-save
+        npm run test -- --reporters=jest-teamcity
     ports:
       - "3000:3000"
 
