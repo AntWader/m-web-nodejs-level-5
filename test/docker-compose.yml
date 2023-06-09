@@ -1,15 +1,15 @@
 version: '3'
 services:
-  # test-web:
-  #   depends_on:
-  #     - test-db
-  #   container_name: swapi.web
-  #   build: ../
-  #   command: >
-  #     bash -c "npm run test
-  #     && npm run test:e2e"
-  #   ports:
-  #     - "3000:3000"
+  test-web:
+    depends_on:
+      - test-db
+    container_name: swapi.web
+    build: ../
+    command: >
+      bash -c "npm run test
+      && npm run test:e2e"
+    ports:
+      - "3000:3000"
 
   test-db:
     container_name: swapi.mysql
