@@ -5,8 +5,9 @@ services:
       - test-db
     container_name: swapi.web
     build: ../
-    command: >
-      bash -c "npm run test
+    command: bash -c "
+      npm install --save-dev jest-teamcity-reporter
+      && npm run test
       && npm run test:e2e"
     ports:
       - "3000:3000"
