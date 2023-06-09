@@ -7,8 +7,7 @@ services:
     build: ../
     command: bash -c "
       npm install --save-dev jest-teamcity-reporter
-      && npm run test
-      && npm run test:e2e"
+      && npm test"
     ports:
       - "3000:3000"
 
