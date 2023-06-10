@@ -1,4 +1,4 @@
-version: '3'
+version: '2.4'
 services:
   web:
     depends_on:
@@ -8,12 +8,8 @@ services:
     command: npm start
     ports:
       - "3000:3000"
-    deploy:
-      resources:
-        limits:
-          memory: 1024M
-        reservations:
-          memory: 1024M
+    mem_limit: 256m
+    memswap_limit: 4g
 
   db:
     container_name: swapi.mysql
@@ -25,12 +21,6 @@ services:
       - 3106:3306
     volumes:
       - swapi-mysql:/var/lib/mysql
-    deploy:
-      resources:
-        limits:
-          memory: 256M
-        reservations:
-          memory: 256M
 
   caddy:
     image: caddy:2.7-alpine
