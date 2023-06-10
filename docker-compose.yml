@@ -8,12 +8,6 @@ services:
     command: npm start
     ports:
       - "3000:3000"
-    deploy:
-      resources:
-        limits:
-          memory: 1024M
-        reservations:
-          memory: 1024M
 
   db:
     container_name: swapi.mysql
@@ -25,12 +19,6 @@ services:
       - 3106:3306
     volumes:
       - swapi-mysql:/var/lib/mysql
-    deploy:
-      resources:
-        limits:
-          memory: 512M
-        reservations:
-          memory: 512M
 
   caddy:
     image: caddy:2.7-alpine

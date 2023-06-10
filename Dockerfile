@@ -8,6 +8,8 @@ RUN apk update && apk add bash
 
 RUN export NODE_OPTIONS="--max-old-space-size=4096" 
 
-RUN npm ci
+RUN npm install
 
 COPY . .
+
+CMD [ "npm", "start" ]
