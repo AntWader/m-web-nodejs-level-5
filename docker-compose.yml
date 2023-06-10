@@ -14,7 +14,6 @@ services:
           memory: 1024M
         reservations:
           memory: 1024M
-    memswap_limit: 2024m
 
   db:
     container_name: swapi.mysql
@@ -32,7 +31,6 @@ services:
           memory: 256M
         reservations:
           memory: 256M
-    memswap_limit: 512m
 
   caddy:
     image: caddy:2.7-alpine
