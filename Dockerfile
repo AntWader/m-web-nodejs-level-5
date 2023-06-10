@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN export NODE_OPTIONS="--max-old-space-size=4096"
+RUN export NODE_OPTIONS="--max-old-space-size=8192"
 
 RUN apk update && apk add bash
 
