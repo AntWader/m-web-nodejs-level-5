@@ -11,9 +11,9 @@ services:
     deploy:
       resources:
         limits:
-          memory: 2048M
+          memory: 1024M
         reservations:
-          memory: 2048M
+          memory: 1024M
 
   db:
     container_name: swapi.mysql
