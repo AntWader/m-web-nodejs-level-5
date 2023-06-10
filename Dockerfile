@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY package*.json ./
 
+RUN export NODE_OPTIONS="--max-old-space-size=2048"
+
 RUN apk update && apk add bash
 
 RUN npm install
